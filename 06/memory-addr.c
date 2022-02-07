@@ -3,15 +3,18 @@
 
 int main() {
   int val;
-  printf("&val: %p\n", &val);
+  printf(" &val: %p\n", &val);
 
-  int *ptr = malloc(sizeof(int));
-  printf("&ptr: %p\n", &ptr);
-  printf(" ptr: %p\n", ptr);
+  int *ptr = malloc(0x1000);
+  printf(" &ptr: %p\n", &ptr);
+  printf("  ptr: %p\n", ptr);
 
-  int *ptr2 = malloc(sizeof(int));
+  int *ptr2 = malloc(0x1000);
   printf("&ptr2: %p\n", &ptr2);
   printf(" ptr2: %p\n", ptr2);
+
+  int arr[4096];
+  printf(" &arr: %p\n", &arr);
 
   return 0;
 }
