@@ -47,7 +47,6 @@ def GET_tracking():
   print(f"User visit count: {etag_userData[etag]['visits']}")
 
 
-  send304 = False
   if send304:
     resp = flask.Response(status=304)
     resp.headers['etag'] = etag
